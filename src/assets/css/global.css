@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: */
+}
+.navigator_bar {
+  width: 100%;
+  height: 64px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  background: #ffd205;
+  color: black;
+}
+.navigator_bar_content {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: auto;
+  align-items: center;
+}
+.navigator_bar_content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navigator_bar_logo {
+  font-size: 30px;
+  font-family: "ZhenyanGB Regular", Courier, monospace;
+}
+.homepage_content {
+  /* height: 100%; */
+  width: 100%;
+  margin: auto;
+  min-height: 400px;
+  background: no-repeat center / 100% url(../imgs/机构工作室banner.jpg);
+}
