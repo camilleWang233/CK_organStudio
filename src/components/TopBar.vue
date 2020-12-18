@@ -9,13 +9,14 @@
 </template>
 
 <script>
-import { test } from "../api/http";
+import { postProjectListByStudio } from "../api/http";
 export default {
   name: "TopBar",
   setup() {
-    const test_ajax = () => {
-      console.log("233");
-    };
+    async function test_ajax() {
+      const res = await postProjectListByStudio();
+      console.log("res:", res.data);
+    }
     return {
       test_ajax,
     };

@@ -3,6 +3,7 @@
   padding: 0;
   /* box-sizing: */
 }
+/* 导航栏 */
 .navigator_bar {
   width: 100%;
   height: 64px;
@@ -10,7 +11,11 @@
   background: #ffd205;
   color: black;
 }
+/* 导航栏菜单 */
 .navigator_bar_content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 18px;
   display: flex;
   justify-content: space-between;
@@ -18,19 +23,34 @@
   margin: auto;
   align-items: center;
 }
-.navigator_bar_content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+/* 导航栏logo */
 .navigator_bar_logo {
   font-size: 30px;
   font-family: "ZhenyanGB Regular", Courier, monospace;
 }
-.homepage_content {
-  /* height: 100%; */
-  width: 100%;
+/* 轮播图 */
+.slide_show {
+  width: 1200px;
   margin: auto;
   min-height: 400px;
   background: no-repeat center / 100% url(../imgs/机构工作室banner.jpg);
+}
+/* 页面内容 */
+.center_content {
+  width: 80%;
+  min-height: 200px;
+  background: cornflowerblue;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+/* 选择列表样式 */
+.tab_list {
+  width: 100%;
+}
+.tab_list_ul {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
 }
