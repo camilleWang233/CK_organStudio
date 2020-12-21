@@ -20,6 +20,23 @@ export const getCheckLogin = () => {
   });
 };
 // 3.登录接口
+export const getloginByAjax = (name, pwd) => {
+  return axios
+    .get(`${HOST_API}user/loginByAjax?userName=${name}&password=${pwd}`)
+    .then((response) => {
+      return response;
+    });
+};
+// 4.注册接口
+export const getregisterByAjax = (name, nickname, pwd) => {
+  return axios
+    .get(
+      `${HOST_API}/user/registerByAjax?userName=${name}&nickName=${nickname}&password=${pwd}`
+    )
+    .then((response) => {
+      return response;
+    });
+};
 // 4.获取通用信息
 // 5.登出接口
 

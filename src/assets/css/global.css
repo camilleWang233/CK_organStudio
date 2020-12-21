@@ -28,6 +28,35 @@
   font-size: 30px;
   font-family: "ZhenyanGB Regular", Courier, monospace;
 }
+/* 登陆注册弹窗  */
+.login_div {
+  position: absolute;
+  width: 384px;
+  height: 500px;
+  z-index: 1999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: lightblue;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px 0 rgba(28, 31, 33, 0.1);
+}
+.login_main {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 350px;
+  height: 450px;
+  background: crimson;
+}
+.login_header {
+  display: flex;
+}
 /* 轮播图 */
 .slide_show {
   width: 1200px;
