@@ -1,10 +1,22 @@
 <template>
-  <div>
+  <div class="navigator_main">
     <div class="navigator_bar">
       <div class="navigator_bar_content">
-        <div class="navigator_bar_logo">羚羊创客</div>
-        <div @click="display_login" class="cursor_pointer">登录</div>
-        <div class="cursor_pointer">注册</div>
+        <a href="http://steam.leadersir.com/">
+          <div class="navigator_bar_logo cursor_pointer"></div>
+        </a>
+        <div class="cursor_pointer">工作室首页</div>
+        <div class="cursor_pointer">最新活动</div>
+        <div class="cursor_pointer">在线课程</div>
+        <div class="cursor_pointer">作品展示</div>
+        <div class="cursor_pointer">边玩边学</div>
+        <div class="cursor_pointer">素材库</div>
+        <div class="cursor_pointer">赛事活动</div>
+        <div @click="display_login" class="cursor_pointer">登录 /</div>
+        <div @click="display_register" class="cursor_pointer">注册</div>
+        <div class="avast_homepage cursor_pointer">
+          <img src width="100%" />
+        </div>
         <!-- <button @click="test_ajax">发送ajax请求</button> -->
       </div>
     </div>
@@ -23,7 +35,7 @@
                 width="2rem"
                 height="2rem"
                 fill="currentColor"
-                class="bi bi-x"
+                class="cursor_pointer"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -36,10 +48,20 @@
             <div v-show="cur==0" class="login">
               <div class="login_content">
                 <div>
-                  <input type="text" v-model.trim="login_item.username" class="input_style" />
+                  <input
+                    type="text"
+                    v-model.trim="login_item.username"
+                    class="input_style"
+                    placeholder="用户名"
+                  />
                 </div>
                 <div>
-                  <input type="pwd" v-model.trim="login_item.password" class="input_style" />
+                  <input
+                    type="password"
+                    v-model.trim="login_item.password"
+                    class="input_style"
+                    placeholder="密码"
+                  />
                 </div>
               </div>
               <div class="login_reg_bottom">
@@ -50,17 +72,32 @@
             <div v-show="cur==1" class="register">
               <div class="register_content">
                 <div>
-                  <input type="text" v-model.trim="reg_item.username" />
+                  <input
+                    type="text"
+                    v-model.trim="reg_item.username"
+                    class="input_style"
+                    placeholder="用户名"
+                  />
                 </div>
                 <div>
-                  <input type="text" v-model.trim="reg_item.nickname" />
+                  <input
+                    type="text"
+                    v-model.trim="reg_item.nickname"
+                    class="input_style"
+                    placeholder="昵称"
+                  />
                 </div>
                 <div>
-                  <input type="pwd" v-model.trim="reg_item.password" />
+                  <input
+                    type="password"
+                    v-model.trim="reg_item.password"
+                    class="input_style"
+                    placeholder="密码"
+                  />
                 </div>
               </div>
               <div class="login_reg_bottom">
-                <button @click="register">注册</button>
+                <button @click="register" class="btn_style">注册</button>
               </div>
             </div>
           </div>
@@ -98,10 +135,22 @@ export default {
         password: "",
       },
     });
+    // 显示登录
     const display_login = () => {
+      cur.value = 0;
       show_login.value = 1;
+
       console.log("i am show");
     };
+
+    // 显示注册
+    const display_register = () => {
+      cur.value = 1;
+      show_login.value = 1;
+
+      console.log("i am show");
+    };
+
     const hide_login = () => {
       console.log("i am hide");
       show_login.value = 0;
@@ -137,6 +186,7 @@ export default {
     return {
       // test_ajax,
       display_login,
+      display_register,
       show_login,
       hide_login,
       login,

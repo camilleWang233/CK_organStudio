@@ -2,24 +2,36 @@
   <div>
     <!-- headers -->
     <TopBar></TopBar>
-    <!-- 轮播图 -->
-    <div class="slide_show"></div>
-    <!-- 页面内容 -->
-    <div class="center_content">
-      <tabBasic></tabBasic>
+    <!-- 侧边栏 -->
+    <besideMenu></besideMenu>
+    <div class="homepage_bg">
+      <!-- 轮播图 -->
+      <div class="slide_show"></div>
+      <!-- 页面内容 -->
+      <div class="center_content">
+        <tabBasic></tabBasic>
+        <tabClass></tabClass>
+      </div>
     </div>
     <!-- footer -->
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import TopBar from "../../components/TopBar";
+import besideMenu from "../../components/besideMenu";
+import Footer from "../../components/Footer";
 import tabBasic from "../../components/tablist/tab_basic";
+import tabClass from "../../components/tablist/tab_class";
 export default {
   name: "HomePage",
   components: {
     TopBar,
+    besideMenu,
     tabBasic,
+    tabClass,
+    Footer,
   },
 };
 </script>

@@ -3,6 +3,10 @@
   padding: 0;
   /* box-sizing: */
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 /* 鼠标样式 */
 .cursor_pointer {
   cursor: pointer;
@@ -32,35 +36,60 @@
   margin-top: 2%;
 }
 /* 导航栏 */
+.navigator_main {
+  box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.1);
+}
 .navigator_bar {
   width: 100%;
   height: 64px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08); */
   background: #ffd205;
   color: black;
 }
 /* 导航栏菜单 */
 .navigator_bar_content {
   position: relative;
+  text-align: center;
+  font-size: 18px;
+  /* display: flex;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 18px;
-  display: flex;
   justify-content: space-between;
-  width: 1000px;
+  */
+  width: 1400px;
+  display: grid;
+  grid-template-columns: 75px repeat(7, 160px) 54px 54px 50px;
+  grid-column-gap: 10px;
   margin: auto;
   align-items: center;
 }
 /* 导航栏logo */
 .navigator_bar_logo {
-  font-size: 30px;
-  font-family: "ZhenyanGB Regular", Courier, monospace;
+  /* font-size: 30px;
+  font-family: "ZhenyanGB Regular", Courier, monospace; */
+  width: 60px;
+  height: 60px;
+  background: center/ contain no-repeat url(../imgs/lingyanglogo22.png);
+}
+/* 头像缩略图 */
+.avast_homepage {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: white;
+}
+/* 首页背景 */
+.homepage_bg {
+  background-size: 100%;
+  padding: 80px 0;
+  background: no-repeat
+    url("http://assets.program.leadersir.net/img/static/background.png") #f5f5f5;
 }
 /* 登陆注册弹窗  */
 .login_div {
   position: absolute;
   width: 380px;
-  height: 300px;
+  max-height: 335px;
   z-index: 1999;
   top: 0;
   bottom: 0;
@@ -75,7 +104,8 @@
 .login_main {
   margin: auto;
   position: absolute;
-
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   width: 350px;
@@ -103,13 +133,14 @@
 /* 轮播图 */
 .slide_show {
   width: 1200px;
+  height: 540px;
+  border-radius: 20px;
   margin: auto;
-  min-height: 400px;
   background: no-repeat center / 100% url(../imgs/机构工作室banner.jpg);
 }
 /* 页面内容 */
 .center_content {
-  width: 80%;
+  width: 1200px;
   min-height: 200px;
   background: cornflowerblue;
   margin: 0 auto;
@@ -125,4 +156,112 @@
   display: flex;
   justify-content: space-around;
   list-style: none;
+}
+.tab_content {
+  height: 500px;
+}
+/* footer样式 */
+.footer_content {
+  background-color: #333333;
+  /* height: 210px; */
+  padding-top: 5px;
+  display: grid;
+  grid-template-rows: 30px auto 80px;
+  grid-row-gap: 10px;
+  text-align: center;
+}
+.footer_row_1 {
+  text-align: center;
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto repeat(3, 200px);
+  /* grid-column-gap: 10px; */
+  color: white;
+  padding-top: 10px;
+  margin: auto;
+  padding: 5px 10%;
+}
+.footer_row_2 {
+  border-top: #999 1px solid;
+  text-align: center;
+
+  width: 80%;
+  display: grid;
+  grid-template-columns: 258px auto repeat(3, 200px);
+  /* grid-column-gap: 10px; */
+  padding-top: 10px;
+  margin: auto;
+  padding: 5px 10%;
+}
+.footer_row_3 {
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  border-top: #999 1px solid;
+  padding-top: 1%;
+}
+.footer2_img {
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.footer2_img > img {
+  width: 100%;
+}
+.footer2_contact_grid {
+}
+.footer2_contact {
+  color: white;
+  display: flex;
+  margin: 3%;
+}
+.footer2_contact > img {
+  margin-right: 5%;
+}
+.footer2_link {
+  color: #999;
+  display: grid;
+  grid-template-rows: repeat(3, 30px);
+  grid-row-gap: 1px;
+}
+
+.footer2_link > div > a {
+  color: #999;
+}
+/* 侧边栏样式 */
+.beside_menu_img {
+  z-index: 30;
+  width: 75px;
+  height: 75px;
+  /* background: aqua; */
+  position: absolute;
+  top: -75px;
+  right: -2px;
+}
+
+.beside_menu_div {
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  bottom: 340px;
+  margin-left: 700px;
+  z-index: 20;
+}
+
+.beside_menu_style {
+  text-align: center;
+  position: absolute;
+  border-radius: 5px;
+  border: 2px solid #e88300;
+  bottom: 0;
+  z-index: 1;
+}
+.beside_menu_text {
+  width: 70px;
+  height: 25px;
+  background: #ffd205;
+  line-height: 20px;
+  font-size: 12px;
+  color: #964611;
 }
