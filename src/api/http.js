@@ -43,9 +43,9 @@ export const getregisterByAjax = (name, nickname, pwd) => {
 // 6.获取机构工作室信息
 // 7.获取教师列表
 // 10.作品列表
-export const postProjectListByStudio = () => {
+export const postProjectListByStudio = (stuid) => {
   return axios
-    .post(`${HOST_API}project/listByStudioId?studioId=1`)
+    .post(`${HOST_API}project/listByStudioId?studioId=${stuid}`)
     .then((response) => {
       return response;
     });

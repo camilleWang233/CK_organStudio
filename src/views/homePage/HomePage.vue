@@ -10,7 +10,8 @@
       <!-- 页面内容 -->
       <div class="center_content">
         <tabBasic></tabBasic>
-        <tabClass></tabClass>
+        <workList></workList>
+        <!-- <tabClass></tabClass> -->
       </div>
     </div>
     <!-- footer -->
@@ -22,6 +23,7 @@
 import TopBar from "../../components/TopBar";
 import besideMenu from "../../components/besideMenu";
 import Footer from "../../components/Footer";
+import workList from "../../components/work_list";
 import tabBasic from "../../components/tablist/tab_basic";
 import tabClass from "../../components/tablist/tab_class";
 export default {
@@ -32,6 +34,7 @@ export default {
     tabBasic,
     tabClass,
     Footer,
+    workList,
   },
 };
 </script>
